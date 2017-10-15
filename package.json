@@ -1,0 +1,26 @@
+{
+  "name": "bilibili2RSS",
+  "version": "0.0.1",
+  "description": "使用RSS订阅喜欢的 bilibili up主和番剧",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIYgod/bilibili2RSS.git"
+  },
+  "keywords": [
+    "Weibo",
+    "RSS"
+  ],
+  "author": "DIYgod",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DIYgod/bilibili2RSS/issues"
+  },
+  "homepage": "https://github.com/DIYgod/bilibili2RSS#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.16.2",
+    "log4js": "^2.3.5",
+    "node-fetch": "^1.7.3",
+  }
+}
