@@ -21,6 +21,6 @@
   "dependencies": {
     "express": "^4.16.2",
     "log4js": "^2.3.5",
-    "node-fetch": "^1.7.3",
+    "node-fetch": "^1.7.3"
   }
 }
