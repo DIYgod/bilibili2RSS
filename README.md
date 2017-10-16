@@ -8,7 +8,9 @@
 
 ## 使用
 
+订阅UP主：https://api.prprpr.me/bilibili2rss/user/{uid}
 
+订阅番剧：https://api.prprpr.me/bilibili2rss/bangumi/{seasonid}
 
 ## Author
 
