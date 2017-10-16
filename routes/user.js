@@ -52,7 +52,7 @@ module.exports = function (req, res) {
             }
         }, function (err, httpResponse, body) {
             const data = JSON.parse(body);
-            const list = data.data.vlist;
+            const list = data.data.vlist || [];
             var rss =
                 `<?xml version="1.0" encoding="UTF-8"?>
             <rss version="2.0">
