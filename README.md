@@ -8,9 +8,9 @@
 
 ## 使用
 
-订阅UP主：https://api.prprpr.me/bilibili2rss/user/{uid}
+订阅UP主：https://api.prprpr.me/bilibili2rss/user/6997378
 
-订阅番剧：https://api.prprpr.me/bilibili2rss/bangumi/{seasonid}
+订阅番剧：https://api.prprpr.me/bilibili2rss/bangumi/6446
 
 ## Author
 
