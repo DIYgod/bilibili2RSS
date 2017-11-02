@@ -12,6 +12,8 @@
 
 订阅番剧：https://api.prprpr.me/bilibili2rss/bangumi/6446
 
+订阅分区：https://api.prprpr.me/bilibili2rss/partion/33
+
 ## Author
 
 **bilibili2RSS** © [DIYgod](https://github.com/DIYgod), Released under the [MIT](./LICENSE) License.<br>
