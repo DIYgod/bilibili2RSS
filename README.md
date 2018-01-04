@@ -2,9 +2,7 @@
 
 > 使用RSS订阅喜欢的 bilibili up主和番剧
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/ucdjQF7wcNNiWY9mCEpAeGLz/DIYgod/bilibili2RSS'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/ucdjQF7wcNNiWY9mCEpAeGLz/DIYgod/bilibili2RSS.svg' />
-</a>
+
 
 ## 使用
 
