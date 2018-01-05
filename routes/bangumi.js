@@ -50,7 +50,7 @@ module.exports = function (req, res) {
             rss += `
         <item>
             <title><![CDATA[第${list[i].index}话 ${list[i].index_title}]]></title>
-            <description><![CDATA[更新时间：${list[i].update_time}<img src="${list[i].cover}">]]></description>
+            <description><![CDATA[更新时间：${list[i].update_time}<img referrerpolicy="no-referrer" src="${list[i].cover}">]]></description>
             <pubDate>${new Date(list[i].update_time).toUTCString()}</pubDate>
             <guid>${list[i].webplay_url}</guid>
             <link>${list[i].webplay_url}</link>

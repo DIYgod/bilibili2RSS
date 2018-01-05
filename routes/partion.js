@@ -33,7 +33,7 @@ module.exports = function (req, res) {
             rss += `
         <item>
             <title><![CDATA[${list[i].title} - ${list[i].author}]]></title>
-            <description><![CDATA[${list[i].description}<img src="${list[i].pic}">]]></description>
+            <description><![CDATA[${list[i].description}<img referrerpolicy="no-referrer" src="${list[i].pic}">]]></description>
             <pubDate>${new Date(list[i].create).toUTCString()}</pubDate>
             <guid>https://www.bilibili.com/video/av${list[i].aid}</guid>
             <link>https://www.bilibili.com/video/av${list[i].aid}</link>
