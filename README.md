@@ -8,6 +8,10 @@
 
 订阅UP主：https://api.prprpr.me/bilibili2rss/user/6997378
 
+订阅UP主收藏夹：https://api.prprpr.me/bilibili2rss/user/fav/2267573
+
+订阅UP主投币视频：https://api.prprpr.me/bilibili2rss/user/coin/2267573
+
 订阅番剧：https://api.prprpr.me/bilibili2rss/bangumi/6446
 
 订阅分区：https://api.prprpr.me/bilibili2rss/partion/33

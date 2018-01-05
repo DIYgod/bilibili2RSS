@@ -13,7 +13,7 @@ module.exports = function (req, res) {
 
     var uid = req.params.uid;
 
-    redis.client.get(`bilibiliuid${uid}`, function(err, reply) {
+    redis.client.get(`bilibiliuid${uid}`, function (err, reply) {
         if (reply) {
             logger.info(`bilibiliuid${uid} form redis, IP: ${ip}`);
             name = reply;
@@ -43,7 +43,7 @@ module.exports = function (req, res) {
         logger.info(`bilibili2RSS uid ${uid}, IP: ${ip}`);
 
         request.get({
-            url: `https://space.bilibili.com/ajax/member/getSubmitVideos?mid=${uid}`,
+            url: `https://space.bilibili.com/ajax/member/getCoinVideos?mid=${uid}`,
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36',
                 'Referer': `https://space.bilibili.com/${uid}/`,
@@ -51,14 +51,14 @@ module.exports = function (req, res) {
             }
         }, function (err, httpResponse, body) {
             const data = JSON.parse(body);
-            const list = data.data.vlist || [];
+            const list = data.data.list || [];
             var rss =
                 `<?xml version="1.0" encoding="UTF-8"?>
             <rss version="2.0">
             <channel>
-            <title>${name}的bilibili空间</title>
+            <title>${name}的bilibili投币视频</title>
             <link>https://space.bilibili.com/${uid}</link>
-            <description>${name}的bilibili空间，使用 bilibili2RSS(https://github.com/DIYgod/bilibili2RSS) 构建</description>
+            <description>${name}的bilibili投币视频，使用 bilibili2RSS(https://github.com/DIYgod/bilibili2RSS) 构建</description>
             <language>zh-cn</language>
             <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
             <ttl>300</ttl>`
@@ -66,10 +66,9 @@ module.exports = function (req, res) {
                 rss += `
             <item>
                 <title><![CDATA[${list[i].title}]]></title>
-                <description><![CDATA[${list[i].description}<br><img referrerpolicy="no-referrer" src="${list[i].pic}">]]></description>
-                <pubDate>${new Date(list[i].created * 1000).toUTCString()}</pubDate>
-                <guid>https://www.bilibili.com/video/av${list[i].aid}</guid>
-                <link>https://www.bilibili.com/video/av${list[i].aid}</link>
+                <description><![CDATA[${list[i].title}<br><img referrerpolicy="no-referrer" src="${list[i].pic}">]]></description>
+                <guid>https://www.bilibili.com/video/av${list[i].stat.aid}</guid>
+                <link>https://www.bilibili.com/video/av${list[i].stat.aid}</link>
             </item>`
             }
             rss += `
